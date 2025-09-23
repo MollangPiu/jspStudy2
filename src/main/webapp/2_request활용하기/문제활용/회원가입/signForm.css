@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "dalmoori";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/dalmoori.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color: rgb(0, 119, 255);
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 95%;
+  background-image: url(./blueblue.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1% auto;
+  z-index: 2;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  background: #ffffff8a;
+  z-index: -1;
+  animation: move 3.5s linear infinite;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0.5%;
+  background: #ffffff8a;
+  z-index: -1;
+  animation: move 3.5s linear infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
+#signUp,
+button[type="reset"],
+button {
+  background-color: rgb(21 57 133 / 68%);
+  color: white;
+  padding: 2%;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-family: "DungGeunMo";
+}
+
+form#signUp {
+  box-shadow: 0 0 37px white;
+  z-index: 2;
+  /* animation: show 1.5s linear; */
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(-1000px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+button,
+button#signUp {
+  transition: 0.2s linear;
+  width: 120px;
+  height: 45px;
+  font-size: 17px;
+}
+
+button:hover,
+button#signUp:hover {
+  background-color: rgba(4, 19, 49, 0.68);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr,
+td {
+  padding: 10px;
+}
+
+.sub-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.subject {
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding-bottom: 8px;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-family: "dalmoori";
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  /* animation: show 1.5s linear; */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+  border: none;
+  padding: 8px;
+  border-radius: 9px;
+  background: #ffffffd6;
+  transition: 0.2s linear;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="number"] {
+  width: 50px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 300px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 15px #ffffff;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+}
