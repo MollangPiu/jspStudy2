@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>배열 순회</title>
+    <title>배열 순회2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
